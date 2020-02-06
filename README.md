@@ -1,1 +1,2 @@
 # PRODUCTION-CONTROL-SYSTEM
+This is a live project for "BEST ROOFING" company.This project deals with production and distribution of that company.For a company, automation is better than manual process.So making the company centralized, the performance will increase, job efficiency will increase, time consuming decreases and also the profit for the company increases.In this company only billing section is computerized.So this project is looking for making all the working process into a centralized process
