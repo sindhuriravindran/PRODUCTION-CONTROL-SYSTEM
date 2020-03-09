@@ -1,0 +1,47 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+                {% csrf_token %}
+		<h1 align="center"  >RAW MATERIAL REGISTRATION</h1>
+		<table align="center" class="table" >
+		<tr>
+			<td >
+				MATERIAL  NAME
+			</td>
+			<td>
+				<input type="text" name="mname" placeholder="enter material name" required="" class="form-control">
+
+			</td>
+
+		</tr>
+		
+		
+		<tr>
+			<td>DESCRIPTION</td>
+			<td><input type="text" name="rdes" placeholder="enter description" required class="form-control">
+				
+			</td>
+		</tr>
+
+		
+		
+		<tr>
+            <td></td>
+			<td>
+				<input type="submit" name="rawreg" value="REGISTER" class="btn btn-primary">
+			</td>
+			
+		</tr>
+		
+			
+				
+		
+		
+
+	</table>
+		
+	</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'temp/login.html' %}
+
+{% block base %}
+
+<div class="lgn">
+<form method="post">
+{% csrf_token %}
+	<h1 align="center"> LOGIN</h1>
+<table align="center" class="table">
+	
+	<tr>
+		<td><input type="text" name="uname" placeholder="USERNAME" class="form-control"><br></td>
+	</tr>
+	<tr>
+		<td><input type="password" name="pass" placeholder="PASSWORD" class="form-control"><br></td>
+	</tr>
+	<tr>
+		<td><input type="submit" name="log" value="LOGIN" class="btn btn-primary btn-block"></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+
+</form>
+</div>
+
+{% endblock %}

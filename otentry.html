@@ -1,0 +1,53 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+		<h1 align="center" style="font-family: courier;" >OVERTIME ENTRY</h1>
+		<table align="center">
+		<tr>
+			<td >
+				EMPLOYEE  ID
+			</td>
+			<td>
+					<select name="EMPID">
+						<option>SELECT</option>
+						<option value="001">1</option>
+						<option value="002">2</option>
+						<option value="003">3</option>
+					</select>
+				</td>
+		</tr>
+		
+		
+		<tr>
+			<td>EMPLOYEE NAME</td>
+			<td>
+				<input type="text" name="empname"  required="">
+			</td
+		</tr>
+
+
+		<tr>
+			<td>DATE</td>
+			<td>
+				<input type="text" name="date" placeholder="enter  date" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>HOURS</td>
+			<td>
+				<input type="text" name="hours" placeholder="enter hours" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" name="regemp" value="REGISTER" style="background-color: violet;width: 150px;font-family: cursive;">
+			</td>
+			
+		</tr>
+	</table>
+		
+	</form>
+
+{% endblock %}

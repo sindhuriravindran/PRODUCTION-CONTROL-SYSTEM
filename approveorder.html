@@ -1,0 +1,53 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+		<h1 align="center" style="font-family: courier;" >APPROVE ORDER</h1>
+
+         <table align="center" class="table table-bordered">
+
+
+
+
+            <tr>
+            <td>ORDER NO</td>
+            <td>DATE</td>
+			<td>RAW MATERIAL</td>
+			<td>QUANTITY</td>
+            <td>APPROVE / REJECT</td>
+            </tr>
+
+
+
+            {% if objval  %}
+           {% for obj in objval %}
+            <tr>
+                <td>{{ obj.orderno }}</td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.rid }}</td>
+                <td>{{ obj.quantity }}</td>
+
+                <td><a href="{% url 'approve_od' idd=obj.orderno %}">approve</a> &emsp;
+                    <a href="{% url 'reject_od' idd=obj.orderno %}">reject</a> </td>
+
+
+        </tr>
+            {% endfor %}
+        {% endif %}
+
+
+         </table>
+    </form>
+    <br>
+
+    <br>
+     {% if msg  %}
+         <div class="well" style="color: #080808;"><h4>{{ msg }}</h4></div>
+
+
+    {% endif %}
+
+
+    <br>
+{% endblock %}

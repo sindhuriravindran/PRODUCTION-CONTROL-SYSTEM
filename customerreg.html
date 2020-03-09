@@ -1,0 +1,65 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+        {% csrf_token %}
+		<h1 align="center" style="font-family: courier;" >CUSTOMER REGISTRATION</h1>
+		<table align="center">
+		<tr>
+			<td >
+				CUSTOMER  NAME
+			</td>
+			<td>
+				<input type="text" name="cusname" placeholder="enter customer name" required="" class="form-control">
+
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>ADDRESS</td>
+			<td><textarea rows="4" cols="26" input type="text" name="addresscus" placeholder="enter customer address" required="">
+				</textarea>
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td>EMAIL ID</td>
+			<td>
+				<input type="email" name="emailcust" placeholder="enter customer address" required="" class="form-control">
+			</td>
+		</tr>
+
+		<tr>
+			<td>PHONE NO</td>
+			<td>
+				<input type="text" name="cusphone" placeholder="enter  phone number" required="" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>CREDIT LIMIT</td>
+			<td>
+				<input type="text" name="credit" placeholder="enter credit limit" required="" class="form-control">
+			</td>
+		</tr>
+		<tr>
+            <td>DAYS</td>
+			<td>
+				<input type="text" name="days" placeholder="enter no of days" required="" class="form-control">
+			</td>
+		</tr>
+		<tr>
+            <td></td>
+			<td>
+				<input type="submit" name="regemp" value="REGISTER" class="btn btn-primary">
+			</td>
+			
+		</tr>
+		</table>
+		</form>
+     {% if msg %}
+        <div class="well text-center" style="color: #080808!important;"><h4>{{ msg }}</h4></div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+                {% csrf_token %}
+
+		<h1 align="center" style="font-family: courier;" >GENERATE PURCHASE ORDER</h1>
+		<table align="center">
+            <tr>
+			<td>RAWMATERIAL ID</td>
+			<td>
+				<select name="rid">
+                    <option>~SELECT~</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>DATE</td>
+			<td>
+				<input type="date" name="date"  required="">
+
+			</td>
+		</tr>
+
+            <tr>
+			<td>QUANTITY</td>
+			<td>
+				<input type="text" name="quantity" placeholder="enter  quantity" required="">
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td>
+				<input type="submit" name="prchordr" value="REGISTER" style="background-color: violet;width: 150px;font-family: cursive;">
+			</td>
+			<td>
+				<input type="button" name="Back" value="BACK" onClick="parent.location='index.html'" style="background-color: violet;width: 150px;font-family: cursive;">
+			</td>
+			
+		</tr>
+		</table>
+		</form>
+{% endblock %}

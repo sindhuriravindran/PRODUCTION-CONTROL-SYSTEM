@@ -1,0 +1,97 @@
+{% extends 'temp/base.html' %}
+
+{% block base %}
+
+	<form method="post">
+		<h1 align="center" style="font-family: courier;" >PURCHASE ENTRY</h1>
+		<table align="center">
+		<tr>
+			<td style="font-family: courier; color: white;">VENDOR ID</td>
+				<td>
+					<select name="vendorid">
+						<option>SELECT</option>
+						<option value="001">001</option>
+						<option value="002">002</option>
+						<option value="003">003</option>
+					</select>
+				</td>
+			</tr>
+		
+		
+		<tr>
+			<td style="font-family: courier; color: white;">VENDOR NAME</td>
+			<td>
+				<input type="text" name="Vvenname"  required="">
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td style="font-family: courier; color: white;">DATE</td>
+			<td>
+				<input type="text" name="date" placeholder="enter date" required="">
+			</td>
+		</tr>
+
+		<tr>
+			<td style="font-family: courier; color: white;">RAW MATERIAL</td>
+			<td>
+				<input type="text" name="product" placeholder="enter  raw material" required="">
+			</td>
+		</tr>
+
+		<tr>
+			<td style="font-family: courier; color: white;">QUANTITY</td>
+			<td>
+				<input type="text" name="qntity" placeholder="enter quantity" required="">
+			</td>
+		</tr>
+		
+		<tr>
+			<td style="font-family: courier; color: white;">CGST</td>
+			<td>
+				<input type="text" name="cgst" placeholder="enter cgst" required="">
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td style="font-family: courier; color: white;">IGST</td>
+			<td>
+				<input type="text" name="igst" placeholder="enter igst" required="">
+			</td>
+		</tr>
+
+		<tr>
+			<td style="font-family: courier; color: white;">DISCOUNT</td>
+			<td>
+				<input type="text" name="dicount" placeholder="enter discount" required="">
+			</td>
+		</tr>
+
+		<tr>
+			<td style="font-family: courier; color: white;">TOTAL</td>
+			<td>
+				<input type="text" name="total"  required="">
+			</td>
+		</tr>
+		<tr>
+			<td style="font-family: courier; color: white;">GSTNO</td>
+			<td>
+				<input type="text" name="gstno" placeholder="enter gstno" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" name="regemp" value="REGISTER" style="background-color: violet;width: 150px;font-family: cursive;">
+			</td>
+			<td>
+				<input type="button" name="Back" value="BACK" onClick="parent.location='index.html'" style="background-color: violet;width: 150px;font-family: cursive;">
+			</td>
+			
+		</tr>
+		</table>
+		 
+	</form>
+
+{% endblock %}
